@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GradeChecker – GWA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎓 GradeChecker</h1>
+      <p>Compute your General Weighted Average (GWA)</p>
+    </header>
+
+    <div class="card">
+      <div class="input-section">
+        <h2>Add Subject</h2>
+        <div class="form-group">
+          <input type="text" id="subjectName" placeholder="Subject (e.g., Math 101)" />
+          <input type="number" id="subjectGrade" placeholder="Grade (1.0 - 5.0)" step="0.1" min="1.0" max="5.0" />
+          <input type="number" id="subjectUnits" placeholder="Units" step="0.5" min="0.5" />
+          <button id="addSubjectBtn">➕ Add</button>
+        </div>
+      </div>
+
+      <div class="subjects-list">
+        <h2>Your Subjects</h2>
+        <table id="subjectsTable">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Grade</th>
+              <th>Units</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+        <p id="emptyMessage">No subjects added yet.</p>
+      </div>
+
+      <div class="action-bar">
+        <button id="calculateBtn" class="primary">🧮 Calculate GWA</button>
+        <button id="clearBtn" class="secondary">🗑️ Clear All</button>
+      </div>
+
+      <div id="resultPanel" class="result-panel hidden">
+        <h3>Your GWA: <span id="gwaValue">0.00</span></h3>
+        <p id="gwaRemark"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
